@@ -54,19 +54,25 @@ function removeTask(e){
     }
 }
 
+// Clear Task
+function clearTask(e){
+    if(confirm('Are you sure?')){
+        // taskList.innerHTML = '';
+        while (taskList.firstChild) {
+            taskList.removeChild(taskList.firstChild);
+        }
+    }
+}
 
-    // const taskVal = document.getElementById('#task').value;
-    // let tasksVal;
-
-    // if (localStorage.getItem('Tasks') === null) {
-    //     tasksVal = [];
-    // } else {
-    //     tasksVal = JSON.parse(localStorage.getItem('Tasks'));
-    // }
-
-    // tasks.push(taskVal);
-
-    // localStorage.setItem('Tasks',JSON.stringify(tasksVal));
-    // tasks.forEach(function(task){
-    //     console.log(task);
-    //     });
+// filter task
+function filterTask(e){
+    const text = e.target.value.toLowerCase();
+    document.querySelectorAll('.collection-item').forEach(function(task){
+        const item = task.firstChild.textContent;
+        if(item.toLowerCase().indexOf(text) != -1){
+            task.style.display = 'block';
+        } else {
+            task.style.display = 'none';
+        }
+    });
+}
