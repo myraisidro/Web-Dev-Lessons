@@ -14,7 +14,7 @@ task.addEventListener("click", function(){
     li.setAttribute('title', 'New Item');
 
     // Create text node and append
-    li.appendChild(document.createTextNode(`${$('#newTxt').val()}`));
+    li.appendChild(document.createTextNode(`${$('#task').val()}`));
 
     // Create new link element
     const link = document.createElement('a');
@@ -30,6 +30,7 @@ task.addEventListener("click", function(){
 
     document.querySelector('ul.collection').appendChild(li);
     
+    taskInput.value='';
 });
 
 
