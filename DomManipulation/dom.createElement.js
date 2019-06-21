@@ -32,7 +32,3 @@ task.addEventListener("click", function(){
     
     taskInput.value='';
 });
-
-
-
-

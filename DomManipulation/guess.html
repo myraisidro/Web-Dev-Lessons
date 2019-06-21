@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM Manipulation - Localstorage</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+<body>
+    <style>
+        .btn-extend{
+            /* width: 100%; */
+            color: #fff !important;
+        }
+    </style>
+
+    <div class="container">
+    <div class="" style="margin-top: 15%">
+        <div class="card-content center">
+            <h1>Number Guesser</h1>
+            <div id="game">
+                <h5>Guess a number between 
+                    <span class="min-num"></span> and
+                    <span class="max-num"></span>
+                </h5>
+                <input type="number" id="guess-input" placeholder="Enter your guess ...">
+                <input type="submit" id="guess-btn" class="btn">
+                <p class="message"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+<!-- Localstorage -->
+<script src="guess.js"></script>
