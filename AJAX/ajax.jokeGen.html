@@ -3,20 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AJAX</title>
+        <title>AJAX Fetch</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
 <body>
-    
-    <div class="container">
-        <h1>AJAX Lesson</h1>
-        <button id="button" class="btn">Get Data</button>
-        <br>
-        <div id="output"></div>
-        
-    </div>
-    
+
+   <div class="container">
+       <h2>Chuck Norris Joke Generator</h2>
+       <form>
+           <div>
+               <label for="number">Number of Jokes
+                   <input type="number" id="number">
+                </label>
+            </div>
+            <div><button class="get-jokes btn">Get Jokes</button></div>
+       </form>
+       <ul class="jokes collection"></ul>
+   </div>
+
 </body>
 </html>
 
@@ -26,4 +31,5 @@
 <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 <!-- AJAX.JS -->
-<script src="ajax.js"></script>
+<!-- <script src="ajax.jokeGen.js"></script> -->
+<script src="ajax.callBackFunc.js"></script>
