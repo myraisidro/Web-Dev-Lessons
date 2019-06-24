@@ -18,43 +18,32 @@ function easyHTTP(){
 //     this.http.send();
 // }
 
-//MAKE AN HTTP GET REQUEST
-easyHTTP.prototype.get = function (url, callback){
-    this.http.open('GET', url, true);
-    this.http.onload = () => {
-        if(this.http.status === 200){
-            callback(null, this.http.responseText);
-        } else{
-            callback('Error: ' + this.http.status);
-        }
-    }
-    this.http.send();
-}
+
 
 //MAKE AN HTTP POST REQUEST
-easyHTTP.prototype.post = function (url, data, callback){
-    this.http.open('POST', url, true);
-    this.http.setRequestHeader('Content-type', 'application/JSON');
-    let self = this;
-    this.http.onload = function(){
-        callback(null, self.http.responseText);
-    }
-    
-    this.http.send(JSON.stringify(data));
-    
-}
-
-//make an HTTP PUT REQUEST
-// easyHTTP.prototype.put = function(url, data,callback){
-//     this.http.open('PUT', url, true);
+// easyHTTP.prototype.post = function (url, data, callback){
+//     this.http.open('POST', url, true);
 //     this.http.setRequestHeader('Content-type', 'application/JSON');
 //     let self = this;
 //     this.http.onload = function(){
 //         callback(null, self.http.responseText);
 //     }
-
+    
 //     this.http.send(JSON.stringify(data));
+    
 // }
+
+// make an HTTP PUT REQUEST
+easyHTTP.prototype.put = function(url, data,callback){
+    this.http.open('PUT', url, true);
+    this.http.setRequestHeader('Content-type', 'application/JSON');
+    let self = this;
+    this.http.onload = function(){
+        callback(null, self.http.responseText);
+    }
+
+    this.http.send(JSON.stringify(data));
+}
 
 
 // make an HTTP DELETE REQUEST
@@ -70,3 +59,4 @@ easyHTTP.prototype.delete = function(url, callback){
     }
     this.http.send();
 }
+
